@@ -15,8 +15,11 @@ builder.Services.AddApplicationServices(builder.Configuration);
 var app = builder.Build();
 app.UseRouting();
 
-app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod()
-    .WithOrigins("http://localhost:4200"));
+app.UseCors(builder => builder
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .WithOrigins("http://localhost:4200"));
+
 
 app.UseAuthorization();
 

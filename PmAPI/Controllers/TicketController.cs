@@ -57,5 +57,50 @@ namespace PmAPI.Controllers
             }
         }
 
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(long id)
+        {
+            var ticket = await _context.Tickets.FindAsync(id);
+
+            if (ticket != null)
+            {
+            
+                 _context.Tickets.Remove(ticket);
+                 await _context.SaveChangesAsync();
+                 return Ok();
+            } 
+            else
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Failed to delete ticket");
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(long id, TicketDto ticket)
+        {
+            var payload = (Ticket)ticket;
+            payload.Id = id;
+
+            var t = await _context.Tickets.FindAsync(id);
+
+            if (t != null)
+            {
+                t.Text = payload.Text;
+                t.StartDate = payload.StartDate;
+                t.Duration = payload.Duration;
+                t.ParentId = payload.ParentId;
+                t.Progress = payload.Progress;
+                t.Type = payload.Type;
+
+                await _context.SaveChangesAsync();
+
+                return Ok( new { t } );
+            }
+            else
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Failed to update ticket");
+            }
+        }
+
     }
 }

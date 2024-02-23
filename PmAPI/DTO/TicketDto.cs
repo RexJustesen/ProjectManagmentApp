@@ -6,7 +6,7 @@ namespace PmAPI.DTO
     public class TicketDto
     {
         public long id { get; set; }
-        public string text { get; set; }
+        public string? text { get; set; }
         public string start_date { get; set; }
         public int duration { get; set; }
         public decimal progress { get; set; }

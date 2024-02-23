@@ -73,3 +73,7 @@ C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\clie
 C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\client\tsconfig.app.json
 C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\client\tsconfig.json
 C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\client\tsconfig.spec.json
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
