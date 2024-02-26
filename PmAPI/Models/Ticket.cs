@@ -1,5 +1,8 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace PmAPI.Models
 {
+    [Table("Tickets")]
     public class Ticket
     {
         public long Id { get; set; }
@@ -9,5 +12,7 @@ namespace PmAPI.Models
         public decimal Progress { get; set; }
         public int? ParentId { get; set; }
         public string? Type { get; set; }
+
+        public int ProjectId { get; set; }
     }
 }

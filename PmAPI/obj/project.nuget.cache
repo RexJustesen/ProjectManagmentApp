@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "oxHJSC+PQbSpCG4b4buddrfzBVscBPU8qaD9F4XIcrQeV466WAk9eFUyhWRPa7m7F8Ba0xqBQn+2a86aCWd0EQ==",
+  "dgSpecHash": "eS8KgQ+x5qaqfl9RyQY7GYm4X5cyk6wYmydOblgI1kxhtd0Z5RvfSpz1wzDJqtzJmHuksxec+XEERXI+Ac2g0Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\PmAPI\\PmAPI\\PmAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\MicroAi\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\MicroAi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\MicroAi\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\MicroAi\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.16\\microsoft.aspnetcore.jsonpatch.7.0.16.nupkg.sha512",
     "C:\\Users\\MicroAi\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.16\\microsoft.aspnetcore.mvc.newtonsoftjson.7.0.16.nupkg.sha512",

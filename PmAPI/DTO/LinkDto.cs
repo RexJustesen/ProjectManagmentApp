@@ -8,6 +8,8 @@ namespace PmAPI.DTO
         public string? type { get; set; }
         public long source { get; set; }
         public long target { get; set; }
+        public int projectId { get; set; }
+
 
         public static explicit operator LinkDto(Link link)
         {
@@ -16,7 +18,8 @@ namespace PmAPI.DTO
                 id = link.Id,
                 type = link.Type,
                 source = link.SourceTicketId,
-                target = link.TargetTicketId
+                target = link.TargetTicketId,
+                projectId = link.ProjectId
             };
         }
 
@@ -27,7 +30,9 @@ namespace PmAPI.DTO
                 Id = link.id,
                 Type = link.type,
                 SourceTicketId = link.source,
-                TargetTicketId = link.target
+                TargetTicketId = link.target,
+                ProjectId = link.projectId
+
             };
         }
     }

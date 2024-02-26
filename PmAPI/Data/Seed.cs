@@ -7,20 +7,19 @@ namespace PmAPI.Data
     {
         public static async Task SeedTickets(DataContext context)
         {
-            if (await context.Tickets.AnyAsync()) 
+
+            Random rnd = new Random();
+            if (await context.Projects.AnyAsync()) 
                 return;
 
             // Parent Ticket (ParentId=null)
-            var epic = new Ticket
+            var epic = new Project
             {
-                Text = "JWT Implementation for Category WebAPI",
-                StartDate = DateTime.Today.AddDays(1),
-                Duration = 5,
-                Progress = 0.4m,
-                ParentId = null,
-                Type = "Epic"
+                Name = "Project 1",
+                Id = rnd.Next()
             };
-            context.Tickets.Add(epic); 
+            context.Projects.Add(epic); 
+            /*
             await context.SaveChangesAsync(); 
             var story1 = new Ticket
             {
@@ -102,8 +101,8 @@ namespace PmAPI.Data
                 new Link{SourceTicketId=story4.Id,TargetTicketId=story5.Id,Type="1"},
                 new Link{SourceTicketId=epic.Id,TargetTicketId=epic2.Id,Type="2"}
             };
-            TicketLinks.ForEach(l => context.Links.Add(l));
+            TicketLinks.ForEach(l => context.Links.Add(l)); */
             await context.SaveChangesAsync();
         }
     }
-}
+} 

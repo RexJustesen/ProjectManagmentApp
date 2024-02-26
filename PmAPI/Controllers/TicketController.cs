@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Http.HttpResults;
+/*using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PmAPI.Data;
@@ -30,6 +30,7 @@ namespace PmAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(TicketDto ticket)
         {
+            var project = await _
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -53,7 +54,7 @@ namespace PmAPI.Controllers
             catch (Exception ex)
             {
                 // Log the exception
-                return StatusCode(StatusCodes.Status500InternalServerError, "Failed to create ticket");
+                return StatusCode(StatusCodes.Status500InternalServerError, ex);
             }
         }
 
@@ -103,4 +104,4 @@ namespace PmAPI.Controllers
         }
 
     }
-}
+} */

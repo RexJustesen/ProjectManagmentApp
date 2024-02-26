@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+/* using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PmAPI.Data;
 using PmAPI.DTO;
@@ -74,4 +74,4 @@ namespace PmAPI.Controllers
         }
 
     }
-}
+} */

@@ -77,3 +77,5 @@ C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Micr
 C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

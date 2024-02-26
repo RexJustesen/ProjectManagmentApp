@@ -8,10 +8,10 @@ using PmAPI.Data;
 
 #nullable disable
 
-namespace PmAPI.Data.Migrations
+namespace PmAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240222172720_InitialCreate")]
+    [Migration("20240226193341_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -26,10 +26,13 @@ namespace PmAPI.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("SourceTicketId")
+                    b.Property<int>("ProjectId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("TargetTicketId")
+                    b.Property<long>("SourceTicketId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<long>("TargetTicketId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Type")
@@ -37,12 +40,28 @@ namespace PmAPI.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ProjectId");
+
                     b.ToTable("Links");
+                });
+
+            modelBuilder.Entity("PmAPI.Models.Project", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Projects");
                 });
 
             modelBuilder.Entity("PmAPI.Models.Ticket", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -55,6 +74,9 @@ namespace PmAPI.Data.Migrations
                     b.Property<decimal>("Progress")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("ProjectId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("TEXT");
 
@@ -66,7 +88,34 @@ namespace PmAPI.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ProjectId");
+
                     b.ToTable("Tickets");
+                });
+
+            modelBuilder.Entity("PmAPI.Models.Link", b =>
+                {
+                    b.HasOne("PmAPI.Models.Project", null)
+                        .WithMany("Links")
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PmAPI.Models.Ticket", b =>
+                {
+                    b.HasOne("PmAPI.Models.Project", null)
+                        .WithMany("Tickets")
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PmAPI.Models.Project", b =>
+                {
+                    b.Navigation("Links");
+
+                    b.Navigation("Tickets");
                 });
 #pragma warning restore 612, 618
         }
