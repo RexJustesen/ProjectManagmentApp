@@ -65,7 +65,7 @@ namespace PmAPI.Controllers
         return Ok(new { tickets });
        }
 
-       [HttpPost("{id}/tickets/create-ticket")]
+       [HttpPost("{id}/tickets")]
        public async Task<IActionResult> CreateTicket(int id, TicketDto ticket)
         {
             if (!ModelState.IsValid)
@@ -153,7 +153,7 @@ namespace PmAPI.Controllers
             return Ok( new { links });
         }
 
-        [HttpPost("{id}/links/create-link")]
+        [HttpPost("{id}/links")]
         public async Task<IActionResult> Create(int id, LinkDto link)
         {
             if (!ModelState.IsValid)
@@ -186,7 +186,7 @@ namespace PmAPI.Controllers
         }
 
         [HttpDelete("{id}/links/{linkId}")]
-        public async Task<IActionResult> Delete(long linkId)
+        public async Task<IActionResult> Delete(int linkId)
         {
             var link = await _context.Links.FindAsync(linkId);
 

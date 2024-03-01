@@ -28,7 +28,7 @@ namespace PmAPI.DTO
             {
                 Id = ticket.Id,
                 text = HtmlEncoder.Default.Encode(ticket.Text),
-                start_date = ticket.StartDate.ToString("yyyy-MM-dd HH:mm"),
+                start_date = ticket.StartDate,
                 duration = ticket.Duration,
                 parent = ticket.ParentId,
                 type = ticket.Type,
@@ -45,7 +45,8 @@ namespace PmAPI.DTO
             {
                 Id = ticket.Id,
                 Text = ticket.text,
-                StartDate = DateTime.Parse(ticket.start_date, System.Globalization.CultureInfo.InvariantCulture),
+                StartDate = ticket.start_date,
+                //DateTime.Parse(ticket.start_date, System.Globalization.CultureInfo.InvariantCulture),
                 Duration = ticket.duration,
                 ParentId = ticket.parent,
                 Type = ticket.type,

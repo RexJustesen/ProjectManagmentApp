@@ -5,7 +5,7 @@ namespace PmAPI.DTO
     public class ProjectDto
     {
         public string Name { get; set; }
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public List<Ticket> Tickets { get; set; } = new();
         public List<Link> Links { get; set; } = new();
 
