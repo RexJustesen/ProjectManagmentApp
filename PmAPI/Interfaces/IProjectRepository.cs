@@ -13,5 +13,6 @@ namespace PmAPI.Interfaces
         Task<Project> GetProjectByIdAsync(int id);
         Task<ProjectDto> GetProjectAsync(string name);
         Task<Project> GetProjectByNameAsync(string name);
+
     }
 }

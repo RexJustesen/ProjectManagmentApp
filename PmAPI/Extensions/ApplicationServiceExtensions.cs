@@ -18,6 +18,13 @@ namespace PmAPI.Extensions
             services.AddScoped<ITicketService,TicketService>();
             services.AddScoped<IProjectRepository,ProjectRepository>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            // Add ReferenceHandler.Preserve to JsonSerializerOptions
+            /*services.AddControllersWithViews()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+                });*/
             
 
 

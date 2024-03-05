@@ -54,6 +54,23 @@ namespace PmAPI.Controllers
             return Ok(project);
        }
 
+       [HttpDelete("{id}")]
+       public async Task<ActionResult<Project>> DeleteProject(int id)
+       {
+         var project = await _context.Projects.FindAsync(id);
+            if (project != null)
+            {
+                _context.Projects.Remove(project);
+                await _context.SaveChangesAsync();
+                return Ok();
+                
+
+            } else {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Project does not exist");
+
+            }
+       }
+
        [HttpGet("{id}/tickets")]
        public async Task<ActionResult<IEnumerable<Ticket>>> GetTicketsByProject(int id)
        {
@@ -144,11 +161,12 @@ namespace PmAPI.Controllers
         }
 
         [HttpGet("{id}/links")]
-        public async Task<ActionResult> GetLinksByProject()
+        public async Task<ActionResult> GetLinksByProject(int id)
         {
-            var links = await _context.Links
-                                .Select(l => (LinkDto)l)
-                                .ToListAsync();
+            var links = await _context.Tickets
+                .Where(t => t.ProjectId == id)
+                .OrderBy(t => t.Id)
+                .ToListAsync();
 
             return Ok( new { links });
         }
