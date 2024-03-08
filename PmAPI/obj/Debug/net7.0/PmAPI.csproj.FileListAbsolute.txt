@@ -79,3 +79,13 @@ C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Newt
 C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
 C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Microsoft.Extensions.Features.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\MicroAi\Desktop\ExternalProjectsGantt\PmAPI\PmAPI\bin\Debug\net7.0\Microsoft.Extensions.Options.dll

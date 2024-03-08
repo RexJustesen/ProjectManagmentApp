@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using PmAPI.Data;
 using PmAPI.DTO;
+using PmAPI.Hubs;
 using PmAPI.Models;
 
 namespace PmAPI.Controllers
@@ -11,9 +13,12 @@ namespace PmAPI.Controllers
     {
         private readonly DataContext _context;
 
-        public CreateProjectController(DataContext context)
+        private readonly IHubContext<ProjectsHub> _hubContext;
+
+        public CreateProjectController(DataContext context, IHubContext<ProjectsHub> hubContext)
         {
             _context = context;
+            _hubContext = hubContext;
         }
 
         [HttpPost]
@@ -32,6 +37,8 @@ namespace PmAPI.Controllers
 
             _context.Projects.Add(project);
             await _context.SaveChangesAsync();
+
+            await _hubContext.Clients.All.SendAsync("ReceiveProjectUpdate", $"New project {project.Name} created");
 
             return new ProjectDto
             {

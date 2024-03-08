@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using PmAPI.Data;
 using PmAPI.DTO;
+using PmAPI.Hubs;
 using PmAPI.Interfaces;
 using PmAPI.Models;
 using PmAPI.Services;
@@ -19,14 +21,17 @@ namespace PmAPI.Controllers
         private readonly ITicketService _ticketService;
         private readonly IMapper _mapper;
 
+        private readonly IHubContext<TicketsHub> _hubContext;
         private readonly DataContext _context;
 
-        public ProjectController(DataContext context, IProjectRepository projectRepository, ITicketService ticketService, IMapper mapper)
+        public ProjectController(DataContext context, IProjectRepository projectRepository, ITicketService ticketService, IMapper mapper, IHubContext<TicketsHub> hubContext)
         {
             _context = context;
             _projectRepository = projectRepository;
             _ticketService = ticketService;
             _mapper = mapper;
+            _hubContext = hubContext;
+
         }
 
         [HttpGet]
@@ -105,6 +110,8 @@ namespace PmAPI.Controllers
         
                 await _context.Tickets.AddAsync(payload);
                 await _context.SaveChangesAsync();
+
+                await _hubContext.Clients.All.SendAsync("ReceiveTicketUpdate", $"New ticket {ticket.Id} created");
         
                 return CreatedAtAction( nameof(GetTicketsByProject), new { id = payload.Id }, payload);
             }
@@ -125,6 +132,8 @@ namespace PmAPI.Controllers
             
                  _context.Tickets.Remove(ticket);
                  await _context.SaveChangesAsync();
+                 await _hubContext.Clients.All.SendAsync("ReceiveTicketUpdate", $"Deleted ticket {ticket.Id} created");
+
                  return Ok();
             } 
             else
@@ -151,6 +160,7 @@ namespace PmAPI.Controllers
                 t.Type = payload.Type;
 
                 await _context.SaveChangesAsync();
+                await _hubContext.Clients.All.SendAsync("ReceiveTicketUpdate", $"Updated ticket {ticket.Id} created");
 
                 return Ok( new { t } );
             }
@@ -163,7 +173,7 @@ namespace PmAPI.Controllers
         [HttpGet("{id}/links")]
         public async Task<ActionResult> GetLinksByProject(int id)
         {
-            var links = await _context.Tickets
+            var links = await _context.Links
                 .Where(t => t.ProjectId == id)
                 .OrderBy(t => t.Id)
                 .ToListAsync();
@@ -193,7 +203,9 @@ namespace PmAPI.Controllers
         
                 await _context.Links.AddAsync(payload);
                 await _context.SaveChangesAsync();
-        
+
+                await _hubContext.Clients.All.SendAsync("ReceiveLinkUpdate", $"Deleted link {link.id} created");
+
                 return CreatedAtAction(nameof(GetLinksByProject), new { id = payload.Id }, payload);
             }
             catch (Exception ex)
@@ -212,6 +224,8 @@ namespace PmAPI.Controllers
             {
                 _context.Links.Remove(link);
                 await _context.SaveChangesAsync();
+                //await _hubContext.Clients.All.SendAsync("ReceiveLinkUpdate", $"Deleted link {link.Id} created");
+
                 return Ok();
             }
             else{

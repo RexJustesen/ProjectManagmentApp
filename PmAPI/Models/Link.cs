@@ -7,8 +7,8 @@ namespace PmAPI.Models
     {
         public int Id { get; set; }
         public string? Type { get; set; }
-        public long SourceTicketId { get; set; }
-        public long TargetTicketId { get; set; }
+        public long Source { get; set; }
+        public long Target { get; set; }
         public int ProjectId { get; set; }
 
 

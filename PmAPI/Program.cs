@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using PmAPI.Models;
 using PmAPI.Extensions;
 using PmAPI.Data;
+using PmAPI.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,10 +18,10 @@ var app = builder.Build();
 app.UseRouting();
 
 app.UseCors(builder => builder
-                        .AllowAnyHeader()
-                        .AllowAnyMethod()
-                        .WithOrigins("http://localhost:4200"));
-
+    .WithOrigins("http://localhost:4200", "https://localhost:8001")
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowCredentials());
 
 app.UseAuthorization();
 
@@ -38,5 +39,10 @@ catch(Exception ex)
     var logger = services.GetService<ILogger<Program>>();
     logger.LogError(ex, "An Error occured during migration");
 }
+
+app.UseHttpsRedirection();
+
+app.MapHub<ProjectsHub>("project-hub");
+app.MapHub<TicketsHub>("ticket-hub");
 
 app.Run();

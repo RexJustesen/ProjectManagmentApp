@@ -17,8 +17,8 @@ namespace PmAPI.DTO
             {
                 id = link.Id,
                 type = link.Type,
-                source = link.SourceTicketId,
-                target = link.TargetTicketId,
+                source = link.Source,
+                target = link.Target,
                 projectId = link.ProjectId
             };
         }
@@ -29,8 +29,8 @@ namespace PmAPI.DTO
             {
                 Id = link.id,
                 Type = link.type,
-                SourceTicketId = link.source,
-                TargetTicketId = link.target,
+                Source = link.source,
+                Target = link.target,
                 ProjectId = link.projectId
 
             };
