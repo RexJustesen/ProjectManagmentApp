@@ -19,15 +19,7 @@ namespace PmAPI.Extensions
             services.AddScoped<IProjectRepository,ProjectRepository>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSignalR();
-
-            // Add ReferenceHandler.Preserve to JsonSerializerOptions
-            services.AddControllersWithViews()
-                .AddJsonOptions(options =>
-                {
-                    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-
-                    //options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
-                });
+            services.AddControllers().AddNewtonsoftJson();
             
 
 

@@ -97,6 +97,7 @@ namespace PmAPI.Controllers
         
             try
             {
+                Random rnd = new Random();
                 var payload = (Ticket)ticket;
         
                 int maxId = await _context.Projects
@@ -105,7 +106,7 @@ namespace PmAPI.Controllers
                     .MaxAsync(t => (int?)t.Id) ?? 0;
         
                 // Increment the maximum ID by 1 to get the next available ID
-                payload.Id = maxId + 1;
+                payload.Id = rnd.Next();
                 payload.ProjectId = id;
         
                 await _context.Tickets.AddAsync(payload);

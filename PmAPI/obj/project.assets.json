@@ -2398,11 +2398,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\PmAPI\\PmAPI\\PmAPI.csproj",
+      "projectUniqueName": "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\PmAPI\\PmAPI\\PmAPI.csproj",
       "projectName": "PmAPI",
-      "projectPath": "c:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\PmAPI\\PmAPI\\PmAPI.csproj",
+      "projectPath": "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\PmAPI\\PmAPI\\PmAPI.csproj",
       "packagesPath": "C:\\Users\\MicroAi\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\PmAPI\\PmAPI\\obj\\",
+      "outputPath": "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\PmAPI\\PmAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MicroAi\\AppData\\Roaming\\NuGet\\NuGet.Config"
