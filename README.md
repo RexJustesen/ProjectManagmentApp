@@ -42,10 +42,6 @@ This file is a controller in an ASP.NET Core application that handles the creati
 
 This file is a controller in the PmAPI project that handles HTTP requests related to the 'Link' entity. It provides functionalities to get all links, create a new link, and delete an existing link.
 
-### WeatherForecastController.cs 🌦️
-
-This file is a controller in an ASP.NET Core application that provides an API endpoint for getting weather forecasts.
-
 ### TicketController.cs 🎫
 
 This file is a controller for managing tickets in a project management application. It provides methods for getting, creating, deleting, and updating tickets.
