@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mOa/Qk7me84h2Oqn1k0oFkI8EXGuNQ6lxHqnAD5P+2GMA437/lxy1TbUboVDhnVHqiIN2PARHtAFIyT8hCrr0w==",
+  "dgSpecHash": "SRcfMrI044PXZGGfddCD90a2xwqfnW3KvLPGCOGtq+1iaaH6hPcF2ff4dvz8EpNATjEw3H2gMNb/hU99z9KZow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\PmAPI\\PmAPI\\PmAPI.csproj",
+  "projectFilePath": "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\ProjectManagmentApp\\PmAPI\\PmAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MicroAi\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\MicroAi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

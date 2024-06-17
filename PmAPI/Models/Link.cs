@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PmAPI.Models
@@ -11,6 +13,11 @@ namespace PmAPI.Models
         public long Target { get; set; }
         public int ProjectId { get; set; }
 
-
+        public DateTime CreatedAt { get; set; }
+        public Link()
+        {
+            CreatedAt = DateTime.UtcNow;
+        }
     }
+    
 }

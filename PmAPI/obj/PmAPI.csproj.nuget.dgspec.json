@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\PmAPI\\PmAPI\\PmAPI.csproj": {}
+    "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\ProjectManagmentApp\\PmAPI\\PmAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\PmAPI\\PmAPI\\PmAPI.csproj": {
+    "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\ProjectManagmentApp\\PmAPI\\PmAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\PmAPI\\PmAPI\\PmAPI.csproj",
+        "projectUniqueName": "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\ProjectManagmentApp\\PmAPI\\PmAPI.csproj",
         "projectName": "PmAPI",
-        "projectPath": "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\PmAPI\\PmAPI\\PmAPI.csproj",
+        "projectPath": "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\ProjectManagmentApp\\PmAPI\\PmAPI.csproj",
         "packagesPath": "C:\\Users\\MicroAi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\PmAPI\\PmAPI\\obj\\",
+        "outputPath": "C:\\Users\\MicroAi\\Desktop\\ExternalProjectsGantt\\ProjectManagmentApp\\PmAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MicroAi\\AppData\\Roaming\\NuGet\\NuGet.Config"

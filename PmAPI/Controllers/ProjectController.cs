@@ -159,6 +159,7 @@ namespace PmAPI.Controllers
                 t.ParentId = payload.ParentId;
                 t.Progress = payload.Progress;
                 t.Type = payload.Type;
+                t.Comments = payload.Comments;
 
                 await _context.SaveChangesAsync();
                 await _hubContext.Clients.All.SendAsync("ReceiveTicketUpdate", $"Updated ticket {ticket.Id} created");

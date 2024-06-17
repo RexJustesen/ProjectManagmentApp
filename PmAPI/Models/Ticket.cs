@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PmAPI.Models
@@ -14,5 +16,12 @@ namespace PmAPI.Models
         public string? Type { get; set; }
 
         public int ProjectId { get; set; }
+        public List<Comments> Comments { get; set; } = new List<Comments>();
+        public DateTime CreatedAt { get; set; }
+
+        public Ticket()
+        {
+            CreatedAt = DateTime.UtcNow;
+        }
     }
 }

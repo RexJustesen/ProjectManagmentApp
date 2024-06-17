@@ -21,6 +21,8 @@ namespace PmAPI.DTO
 
         public int projectId { get; set; }
 
+        public List<Comments> Comments { get; set; } = new List<Comments>();
+
 
         public static explicit operator TicketDto(Ticket ticket)
         {
@@ -33,8 +35,8 @@ namespace PmAPI.DTO
                 parent = ticket.ParentId,
                 type = ticket.Type,
                 progress = ticket.Progress,
-                projectId = ticket.ProjectId
-
+                projectId = ticket.ProjectId,
+                Comments = ticket.Comments,
             };
         }
 
@@ -51,7 +53,8 @@ namespace PmAPI.DTO
                 ParentId = ticket.parent,
                 Type = ticket.type,
                 Progress = ticket.progress,   
-                ProjectId = ticket.projectId    
+                ProjectId = ticket.projectId,
+                Comments = ticket.Comments
          
             };
         }
