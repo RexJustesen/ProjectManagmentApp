@@ -41,5 +41,6 @@ dotnet run
 
 # TODO
 
-1. Refactor the controllers to correctly use interfaces and services to decouple dependencies. 
-2. Clean up and comment code effectively. 
+1. Refactor the controllers to correctly use interfaces and services to decouple dependencies.
+2. Add User profile, security, login and user profile management. 
+3. Clean up and comment code effectively. 
